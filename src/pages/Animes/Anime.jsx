@@ -2,6 +2,8 @@ import React from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import Card from '../../components/Card';
 import CardList from '../../components/CardList';
+import Pagination from '../../components/Pagination';
+import SideList from '../../components/SideList';
 
 const Anime = () => {
 	return (
@@ -14,27 +16,16 @@ const Anime = () => {
 					type="text"
 				/>
 			</div>
-			<div className="justify-items-center grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-7">
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<CardList />
+			<div className="sm:flex sm:flex-row">
+				<div className="sm:w-4/5 justify-items-center grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+					<CardList />
+					<Pagination />
+				</div>
+				<div className="hidden sm:block mt-5 min-h-screen rounded-lg text-white bg-gray-900 w-1/5">
+					<SideList />
+				</div>
 			</div>
+
 			{/* pagination  */}
 		</div>
 	);
