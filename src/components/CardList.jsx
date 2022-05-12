@@ -1,11 +1,10 @@
 import { data } from 'autoprefixer';
 import React, { useState, useEffect } from 'react';
 import { getAnime } from '../api';
+import Card from './Card';
 
 const CardList = () => {
 	const [animesData, setAnimesData] = useState(null);
-
-	console.log(animesData);
 
 	useEffect(() => {
 		getAnime().then((data) => {
@@ -14,11 +13,11 @@ const CardList = () => {
 	}, []);
 
 	return (
-		<div>
+		<>
 			{animesData?.map((animeData) => (
-				<p className="text-white">{animeData.title}</p>
+				<Card animeData={animeData} />
 			))}
-		</div>
+		</>
 	);
 };
 
