@@ -9,7 +9,6 @@ function App() {
 				<Navbar />
 
 				<Anime />
-				<Pagination />
 			</div>
 		</>
 	);
